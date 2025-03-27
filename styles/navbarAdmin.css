@@ -10,3 +10,9 @@
 .navbar-brand img {
     filter: brightness(50%) contrast(1.5);
 }
+
+.sidebar-left {
+    flex-direction: column;
+
+
+}
