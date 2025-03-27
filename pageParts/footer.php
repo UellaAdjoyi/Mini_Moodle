@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body>
+    <footer>
+        <div class="card-footer border-success">@Copyright/initiaion_web_printemps_2025</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.navbar {
+    background-color: rgb(14, 148, 231);
+}
+
+.navbar a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar-brand img {
+    filter: brightness(50%) contrast(1.5);
+}
