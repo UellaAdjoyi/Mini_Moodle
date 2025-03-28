@@ -8,50 +8,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Sidebar */
-#sidebar {
-    background-color: white;
-    /* height: 100vh; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-top: 100px;
-}
-
-#sidebar .nav-item {
-    margin-bottom: 15px;
-}
-
-#sidebar .nav-link {
-    color: #333;
-    font-size: 16px;
-    padding: 12px 20px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-#sidebar .nav-link:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-#sidebar .nav-link svg {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-/* Lien */
-#sidebar .nav-link.active {
-    background-color: #1b7bf0;
-    color: white;
-}
-
-#sidebar .nav-item a:last-child {
-    margin-bottom: 0;
-}
 
 /* Main content */
 #main-content {
