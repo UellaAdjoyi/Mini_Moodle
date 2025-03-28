@@ -1,49 +1,66 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
 #sidebar {
-    background: white;
-    padding-top: 20px;
-    /* left: 0;
-    top: 56px; */
-    margin-left: 0%;
+    background-color: white;
+    /* height: 100vh; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
 }
 
-.sidebar-nav {
-    list-style: none;
+#sidebar .nav-item {
+    margin-bottom: 15px;
 }
 
-.nav-item {
-    padding-bottom: 15px;
-    transition: background 0.3s;
-
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: black;
+#sidebar .nav-link {
+    color: #333;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 4px;
     display: flex;
-    /* align-items: center;
-    gap: 10px; */
-    /* font-size: 16px;
-    padding: 10px 20px; */
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-/* .nav-item i {
-    font-size: 18px;
-} */
-
-
-.nav-item:hover {
-    background: #dce2e8;
+#sidebar .nav-link:hover {
+    background-color: #007bff;
+    color: white;
 }
 
-/* .nav-item.active {
-    background: #8f959b;
-} */
+#sidebar .nav-link svg {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
 
+/* Lien */
+#sidebar .nav-link.active {
+    background-color: #1b7bf0;
+    color: white;
+}
 
+#sidebar .nav-item a:last-child {
+    margin-bottom: 0;
+}
+
+/* Main content */
 #main-content {
-    padding-top: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: 250px;
+    padding: 10px;
+    margin-top: 100px;
+}
 
+#main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
