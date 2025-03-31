@@ -65,6 +65,7 @@ include('../../pageParts/navbarAdmin.php');
                             <form id="add-ue-form">
                                 <input type="text" id="ue-code" class="form-control mb-2" placeholder="Code UE" required>
                                 <input type="text" id="ue-title" class="form-control mb-2" placeholder="Intitulé" required>
+                                <input type="file" id="ue-image" class="form-control mb-2" accept="image/*">
                                 <button type="submit" class="btn btn-primary">Ajouter</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                             </form>

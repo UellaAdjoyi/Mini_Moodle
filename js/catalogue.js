@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //  base de données en mémoire pour tester
     let ueData = [
-        { id: 1, code: "UE101", intitule: "Mathématiques" },
-        { id: 2, code: "UE102", intitule: "Programmation" }
+        { id: 1, code: "UE101", intitule: "Mathématiques", image: null },
+        { id: 2, code: "UE102", intitule: "Programmation", image: null }
     ];
 
     let userData = [
@@ -25,20 +25,37 @@ document.addEventListener("DOMContentLoaded", function () {
         ueData.forEach(ue => {
             let ueItem = document.createElement("div");
             ueItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+
+            // Vérifier si l'image est fournie, sinon utiliser une image par défaut
+            let imageUrl = ue.image ? ue.image : "/Projet_WE4A/assets/images/ue.png";
+
             ueItem.innerHTML = `
-                <span>${ue.code} - ${ue.intitule}</span>
-                <button class="btn btn-primary btn-sm update-ue" data-id="${ue.id}">Modifier</button>
-                <button class="btn btn-danger btn-sm delete-ue" data-id="${ue.id}">Supprimer</button>
+                <div class="d-flex align-items-center">
+                    <img src="${imageUrl}" alt="UE Image" class="ue-img me-2">
+                    <span>${ue.code} - ${ue.intitule}</span>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-sm update-ue" data-id="${ue.id}">Modifier</button>
+                    <button class="btn btn-danger btn-sm delete-ue" data-id="${ue.id}">Effacer</button>
+                </div>
             `;
+
             ueList.appendChild(ueItem);
         });
     }
+
 
     // l'ajout d'UE
     document.getElementById("add-ue-form").addEventListener("submit", function (e) {
         e.preventDefault();
         let code = document.getElementById("ue-code").value;
         let intitule = document.getElementById("ue-title").value;
+        let ueImageInput = document.getElementById("ue-image");
+        let ueImage = ueImageInput.files[0]; // Récupérer le fichier image
+        let defaultImage = "../assets/images/ue.png";
+
+        // Vérifier si une image est sélectionnée
+        let imagePath = ueImage ? URL.createObjectURL(ueImage) : defaultImage;
 
         if (code && intitule) {
             // Ajouter une nouvelle UE
@@ -91,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
             userItem.innerHTML = `
                 <span>${user.nom}  ${user.prenoms}</span>
                 <button class="btn btn-primary btn-sm update-ue" data-id="${user.id}">Modifier</button>
-                <button class="btn btn-danger btn-sm delete-ue" data-id="${user.id}">Supprimer</button>
+                <button class="btn btn-danger btn-sm delete-ue" data-id="${user.id}">Effacer</button>
             `;
             userList.appendChild(userItem);
         });
