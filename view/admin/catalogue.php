@@ -18,13 +18,13 @@ include('../../pageParts/navbarAdmin.php');
 
             <!-- Boutons pour changer d'onglet -->
             <div class="d-flex justify-content-center mb-4">
-                <button id="ue-tab" class="btn btn-primary me-2">UE</button>
+                <button id="ue-tab" class="btn btn-primary me-2">UEs</button>
                 <button id="user-tab" class="btn btn-secondary">Utilisateurs</button>
             </div>
 
             <!-- Contenu des UE -->
             <div id="ue-content">
-                <h2 class="mt-4">Liste des UE</h2>
+                <h2 class="mt-4">Liste des UEs</h2>
                 <div> <!--  ajouter une UE -->
                     <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUeModal">
                         Créer
@@ -33,7 +33,7 @@ include('../../pageParts/navbarAdmin.php');
                 <div id="ue-list" class="list-group mb-5">
                     <!--  UE  chargées via AJAX ici -->
                 </div>
-                <h3 class="mt-4">UE Assignées à l'utilisateur</h3>
+                <h3 class="mt-4">UEs Assignées à l'utilisateur</h3>
                 <ul id="assigned-ue-list" class="list-group">
                     <!-- Les UE assignées seront affichées ici -->
                 </ul>

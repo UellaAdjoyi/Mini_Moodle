@@ -17,8 +17,8 @@ include('../../pageParts/navbarAdmin.php')
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10" id="main-content">
-                <h1>Bienvenue sur le tableau de bord</h1>
+            <div class="col-md-8 offset-1" id="main-content">
+                <h1>Bienvenue sur votre tableau de bord</h1>
                 <div class="row" id="content">
                     <div class="col-3 d-flex">
                         <div class="card flex-fill">
