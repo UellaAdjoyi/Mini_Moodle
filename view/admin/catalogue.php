@@ -25,15 +25,14 @@ include('../../pageParts/navbarAdmin.php');
             <!-- Contenu des UE -->
             <div id="ue-content">
                 <h2 class="mt-4">Liste des UE</h2>
+                <div> <!--  ajouter une UE -->
+                    <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUeModal">
+                        Créer
+                    </button>
+                </div>
                 <div id="ue-list" class="list-group mb-5">
                     <!--  UE  chargées via AJAX ici -->
                 </div>
-
-                <!--  ajouter une UE -->
-                <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUeModal">
-                    Ajouter une UE
-                </button>
-
                 <h3 class="mt-4">UE Assignées à l'utilisateur</h3>
                 <ul id="assigned-ue-list" class="list-group">
                     <!-- Les UE assignées seront affichées ici -->
@@ -44,9 +43,14 @@ include('../../pageParts/navbarAdmin.php');
             <!-- Contenu des Utilisateurs (masqué par défaut) -->
             <div id="user-content" style="display: none;">
                 <h2 class="mt-4">Liste des Utilisateurs</h2>
+                <div><button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="">
+                        <a href="inscription.php" class="inscription">Créer</a>
+                    </button></div>
                 <div id="user-list" class="list-group">
                     <!-- Les utilisateurs seront chargés via AJAX ici -->
                 </div>
+                <!--  ajouter un user -->
+
             </div>
 
             <!-- ajout d'une UE -->

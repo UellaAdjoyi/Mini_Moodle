@@ -20,7 +20,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Titres */
+
 h1,
 h2,
 h3 {
@@ -33,7 +33,7 @@ h3 {
     font-weight: bold;
 }
 
-/* Liste des UE et utilisateurs */
+
 .list-group-item {
     display: flex;
     justify-content: space-between;
@@ -51,10 +51,13 @@ h3 {
     cursor: pointer;
 }
 
-/* Bouton d'ajout d'UE */
+
 .btn-success {
     font-weight: bold;
     margin-top: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+
 }
 
 /* Modal */
@@ -84,4 +87,8 @@ h3 {
 /* Masquer les contenus par défaut */
 #user-content {
     display: none;
+}
+
+.inscription {
+    text-decoration: none !;
 }

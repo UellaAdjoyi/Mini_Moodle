@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript chargé !");
 
-    // Simuler une base de données en mémoire pour tester
+    //  base de données en mémoire pour tester
     let ueData = [
         { id: 1, code: "UE101", intitule: "Mathématiques" },
         { id: 2, code: "UE102", intitule: "Programmation" }
+    ];
+
+    let userData = [
+        { id: 1, nom: "ADH", prenoms: "Mathématiques" },
     ];
 
     // Références DOM
@@ -13,22 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const ueContent = document.getElementById("ue-content");
     const userContent = document.getElementById("user-content");
     const ueList = document.getElementById("ue-list");
+    const userList = document.getElementById("user-list");
 
     // Fonction de chargement des UE
     function loadUE() {
-        ueList.innerHTML = ""; // Clear the list before adding the new items
+        ueList.innerHTML = "";
         ueData.forEach(ue => {
             let ueItem = document.createElement("div");
             ueItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
             ueItem.innerHTML = `
                 <span>${ue.code} - ${ue.intitule}</span>
+                <button class="btn btn-primary btn-sm update-ue" data-id="${ue.id}">Modifier</button>
                 <button class="btn btn-danger btn-sm delete-ue" data-id="${ue.id}">Supprimer</button>
             `;
             ueList.appendChild(ueItem);
         });
     }
 
-    // Ajouter un événement pour l'ajout d'UE
+    // l'ajout d'UE
     document.getElementById("add-ue-form").addEventListener("submit", function (e) {
         e.preventDefault();
         let code = document.getElementById("ue-code").value;
@@ -75,8 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
         ueTab.classList.remove("active");
     });
 
+
+    //Users
+    function loadUser() {
+        userList.innerHTML = "";
+        userData.forEach(user => {
+            let userItem = document.createElement("div");
+            userItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+            userItem.innerHTML = `
+                <span>${user.nom}  ${user.prenoms}</span>
+                <button class="btn btn-primary btn-sm update-ue" data-id="${user.id}">Modifier</button>
+                <button class="btn btn-danger btn-sm delete-ue" data-id="${user.id}">Supprimer</button>
+            `;
+            userList.appendChild(userItem);
+        });
+    }
+
     // Charger les UE au démarrage
     loadUE();
+    loadUser();
 
     // Afficher l'onglet UE par défaut
     ueTab.click();
