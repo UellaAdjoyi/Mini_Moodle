@@ -82,3 +82,6 @@ include('../../pageParts/navbarAdmin.php');
 </body>
 
 </html>
+<?php
+include('../../pageParts/footer.php');
+?>

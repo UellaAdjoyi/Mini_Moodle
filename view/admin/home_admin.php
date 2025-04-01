@@ -157,8 +157,9 @@ include('../../pageParts/navbarAdmin.php')
     <script src="../../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<?php
-include('../../pageParts/footer.php')
-?>
 
 </html>
+
+<?php
+include('../../pageParts/footer.php');
+?>
