@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             ueList.appendChild(ueItem);
         });
+
     }
+
 
 
     // l'ajout d'UE
@@ -83,6 +85,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    //Modification d'une Ue
+    function editUE(ueId) {
+        let ue = ueData.find(item => item.id == ueId);
+        if (!ue) return;
+
+        // Affichage du formulaire avec les valeurs actuelles
+        document.getElementById("ueId").value = ue.id;
+        document.getElementById("ueCode").value = ue.code;
+        document.getElementById("ueIntitule").value = ue.intitule;
+        document.getElementById("ueImage").value = ue.image || "";
+
+        let modal = new bootstrap.Modal(document.getElementById("editUEModal"));
+        modal.show();
+    }
+    document.getElementById("saveUEChanges").addEventListener("click", () => {
+        if (confirm("Voulez-vous sauvegarder vos modifications ?")) {
+            let ueId = document.getElementById("ueId").value;
+            let ue = ueData.find(item => item.id == ueId);
+            if (!ue) return;
+
+            // Mettre à jour les valeurs
+            ue.code = document.getElementById("ueCode").value;
+            ue.intitule = document.getElementById("ueIntitule").value;
+            ue.image = document.getElementById("ueImage").value;
+
+            // Mettre à jour l'affichage
+            loadUE();
+            let modal = bootstrap.Modal.getInstance(document.getElementById("editUEModal"));
+            modal.hide();
+        }
+    });
+
+    ueList.addEventListener("click", (event) => {
+        if (event.target.classList.contains("update-ue")) {
+            let ueId = event.target.getAttribute("data-id");
+            editUE(ueId);
+        }
+    })
+
+
     // Gestion des onglets
     ueTab.addEventListener("click", function () {
         ueContent.style.display = "block";
@@ -121,3 +164,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Afficher l'onglet UE par défaut
     ueTab.click();
 });
+
+

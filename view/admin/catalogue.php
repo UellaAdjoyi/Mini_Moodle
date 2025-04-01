@@ -74,8 +74,41 @@ include('../../pageParts/navbarAdmin.php');
                 </div>
             </div>
 
+            <!--modification d"UES -->
+            <div class="modal fade" id="editUEModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modifier l'UE</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="ueId">
+                            <div class="mb-3">
+                                <label for="ueCode" class="form-label">Code UE</label>
+                                <input type="text" id="ueCode" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ueIntitule" class="form-label">Intitulé</label>
+                                <input type="text" id="ueIntitule" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ueImage" class="form-label">Image URL</label>
+                                <input type="text" id="ueImage" class="form-control">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
+
 
     <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/catalogue.js"></script>
