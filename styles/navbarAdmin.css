@@ -67,3 +67,27 @@
 #sidebar .nav-item a:last-child {
     margin-bottom: 0;
 }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Afficher le menu quand on survole l'élément #user */
+/* #user:hover+.dropdown-menu {
+    display: block;
+} */
+
+.dropdown-menu {
+    top: 100%;
+    margin-top: 5px;
+    width: 200px;
+    min-width: 200px;
+    background-color: #007bff;
+}
+
+.dropdown-menu .dropdown-item {
+    color: black;
+
+}
