@@ -1,0 +1,64 @@
+/* Hauteur complète pour gérer le sticky footer */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organise le contenu en colonne */
+}
+
+main {
+    flex: 1; /* Prend l'espace disponible entre le header et le footer */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#posts .post {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#posts .post:hover {
+    transform: translateY(-5px);
+}
+
+#posts .post.message {
+    background-color: #e9f5e9;
+    border: 1px solid #4caf50;
+}
+
+#posts .post.file-share {
+    background-color: #e9eff5;
+    border: 1px solid #2196f3;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.post-actions button {
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.btn-warning, .btn-danger {
+    font-size: 0.85rem;
+    padding: 3px 8px;
+}
