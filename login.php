@@ -26,7 +26,7 @@
 
                     <div class="input-group  mb-3">
                         <span class="input-group-text"></span>
-                        <input type="passwor" class="form-control" placeholder="Password ">
+                        <input type="password" class="form-control" placeholder="Password ">
                     </div>
                     <div class="d-grid  p-3">
                         <button type="button" class="btn btn-primary mb-3 ">Connexion</button>
