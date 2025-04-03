@@ -100,18 +100,18 @@
     </div>
     <div class="rectangle">
         <h1>WE4A Développement Web </h1>
-        <div class="messages"> 
+        <div class="messages">
             <div class="message fichier">
                 <i class="fas fa-file-alt icon"></i>
                 <span class="message-text">Voici un fichier important à télécharger.</span>
-                <div class="date-heure">22/02/2005 20:00</div> 
+                <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
                     <button class="btn btn-warning btn-sm mr-2" onclick="window.location.href='modification.php';">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
             <div class="message texte">
-            <i class="fas fa-sms"></i>
+                <i class="fas fa-sms"></i>
                 <span class="message-text">Bonjour, j'espère que vous allez bien !</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
@@ -128,7 +128,7 @@
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
-            
+
             <div class="message texte">
                 <i class="fas fa-info-circle"></i>
                 <span class="message-text">Pouvez-vous me répondre demain ?</span>
@@ -147,11 +147,11 @@
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                     <!-- <button class="btn" onclick="showPopup('warning')">Avertissement</button> -->
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
     <!-- Popup Warning -->
     <div class="popup-container warning" id="warning-popup">
         <div class="popup">
