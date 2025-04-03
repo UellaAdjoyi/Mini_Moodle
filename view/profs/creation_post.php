@@ -1,49 +1,19 @@
-<?php
-include('../../pageParts/navbarEtProf.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="../../styles/navbarAdmin.css">
+    <title>Création de post</title>
     <link rel="stylesheet" href="../../styles/creationPost.css">
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <?php include("../../pageParts/link.php");?>
 </head>
 
 <body>
-
-    <!-- Modal de modification du profil -->
-    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editProfileModalLabel">Modifier mon profil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editProfileForm">
-                        <div class="mb-3">
-                            <label for="profileName" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="profileName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="profileEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="profileEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="profileAvatar" class="form-label">Changer l'avatar</label>
-                            <input type="file" class="form-control" id="profileAvatar">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- include de la nav bar -->
+    <?php include("../../pageParts/navbarProf.php");?>
+    <!-- debut de la page  -->
 
     <div class="rectangle">
         <div class="container mt-4">
@@ -106,8 +76,6 @@ include('../../pageParts/navbarEtProf.php');
 
     </div>
 
-    <script src="/Projet_WE4A/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Projet_WE4A/js/updateProfile.js"></script>
     <script src="/Projet_WE4A/js/creationPost.js"></script>
 </body>
 
