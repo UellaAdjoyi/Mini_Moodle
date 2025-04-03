@@ -12,6 +12,9 @@
     <footer>
         <div class="card-footer border-success">@Copyright/initiation_web_printemps_2025</div>
     </footer>
+
+    <script src="/Projet_WE4A/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

@@ -150,6 +150,10 @@
                             <input type="text" class="form-control" id="profileName" required>
                         </div>
                         <div class="mb-3">
+                            <label for="profileFirstName" class="form-label">Prénoms</label>
+                            <input type="text" class="form-control" id="profileFirstName" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="profileEmail" class="form-label">Email</label>
                             <input type="email" class="form-control" id="profileEmail" required>
                         </div>
