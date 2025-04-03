@@ -1,6 +1,3 @@
-<?php
-include('../../pageParts/navbarAdmin.php')
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +5,21 @@ include('../../pageParts/navbarAdmin.php')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin home</title>
-    <link rel="stylesheet" href="../../styles/adminpage.css">
-    <link rel="stylesheet" href="/Projet_WE4A/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="/Projet_WE4A/styles/adminpage.css">
+    <?php
+    include('../../pageParts/link.php')
+    ?>
 
 </head>
 
 <body>
+    <?php
+    include('../../pageParts/navbarAdmin.php')
+    ?>
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 offset-1" id="main-content">
+            <div class="col-md-8 offset-2" id="main-content">
                 <h1>Bienvenue sur votre tableau de bord</h1>
                 <div class="row" id="content">
                     <div class="col-3 d-flex">

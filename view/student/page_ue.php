@@ -1,5 +1,5 @@
 <?php
-include('../../pageParts/navbarEtProf.php');
+include('../../pageParts/navbarEtud.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -86,6 +86,7 @@ include('../../pageParts/navbarEtProf.php');
     </div>
 </div>
 </main>
+</br>
     <footer>
         <?php
         include('../../pageParts/footer.php');

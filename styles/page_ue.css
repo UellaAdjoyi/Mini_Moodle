@@ -10,11 +10,11 @@ body {
 }
 
 .page-ue h2 {
-    margin-top: 80px; /* Ajuste cette valeur en fonction de la hauteur de ta navbar */
+    margin-top: 100%; 
 }
 
 .page-ue main {
-    flex: 1; /* Prend l'espace disponible entre le header et le footer */
+    flex: 1;
 }
 .page-ue .card {
     border-radius: 10px;
