@@ -26,7 +26,7 @@
                 <span class="message-text">Voici un fichier important à télécharger.</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" onclick="window.location.href='modification.php';">Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile" >Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <span class="message-text">Bonjour, j'espère que vous allez bien !</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" onclick="window.location.href='modification.php';">Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modMessage">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <span class="message-text">Votre rapport PDF est disponible ici.</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" onclick="window.location.href='modification.php';">Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile" >Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <span class="message-text">Pouvez-vous me répondre demain ?</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" onclick="window.location.href='modification.php';">Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modMessage">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -63,9 +63,8 @@
                 <span class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis repellat earum minima id iste consectetur commodi totam inventore. Ducimus vero sapiente nesciunt libero sed ea non eveniet reprehenderit consectetur error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste odio accusamus magni ullam autem architecto, est rem cumque pariatur laboriosam dignissimos aut, eligendi et molestiae eos qui, soluta neque consectetur!</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2">Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modMessage">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
-                    <!-- <button class="btn" onclick="showPopup('warning')">Avertissement</button> -->
                 </div>
 
             </div>
@@ -96,6 +95,69 @@
             </div>
         </div>
     </div>
+    
+    <!--modification des messages -->
+    <div class="modal fade" id="modMessage" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modifier le message</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="ueId">
+                            <div class="mb-3">
+                                <label for="msgTitle">Titre du Message</label>
+                                <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le titre du message">
+                            </div>
+                            <div class="mb-3">
+                                <label for="msgContent">Contenu du Message</label>
+                                <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-primary" >Enregistrer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- modification des fichiers -->
+    <div class="modal fade" id="modFile" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modifier le post</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="ueId">
+                            <div class="mb-3">
+                                <label for="msgTitle">Nom du Fichier</label>
+                                <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le nom du fichier">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="fileUpload">Choisir un Fichier</label>
+                                <input type="file" class="form-control" id="fileUpload">
+                            </div>
+                            <div class="mb-3">
+                                <label for="msgContent">Commentaire</label>
+                                <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     <script src="../../js/post_ue_prof.js"></script>
 
 </body>

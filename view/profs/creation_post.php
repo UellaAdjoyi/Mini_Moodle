@@ -28,11 +28,13 @@
                 <div class="form-title">Créer un Message Texte</div>
                 <form>
                     <div class="radio-container">
-                        <label>Est-ce un message important ?AIDEZ MOI A TROUVER LES TYPES DE MESSAGE !!!!</label><br>
-                        <input type="radio" id="important" name="importance" value="important">
+                        <label>Type de message</label><br>
+                        <input type="radio" id="important" name="typeMessage" value="important">
                         <label for="important">Important</label>
-                        <input type="radio" id="notImportant" name="importance" value="notImportant" checked>
-                        <label for="notImportant">Pas important</label>
+                        <input type="radio" id="recommandation" name="typeMessage" value="recommandation" checked>
+                        <label for="recommandation">Recommandationt</label>
+                        <input type="radio" id="information" name="typeMessage" value="information" checked>
+                        <label for="information">Information</label>
                     </div>
                     <div class="form-group">
                         <label for="msgTitle">Titre du Message</label>

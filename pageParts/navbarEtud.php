@@ -5,7 +5,7 @@
             </a>
             <!-- Liens de navigation -->
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="../index.php">Accueil</a>
+                <a class="nav-item nav-link" href="../../index.php">Accueil</a>
                 <a class="nav-item nav-link" href="../student/page_ue.php">Choix d'UE</a>
                 <a class="nav-item nav-link" href="#">Liste des UE</a>
             </div>
