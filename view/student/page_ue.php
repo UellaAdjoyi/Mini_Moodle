@@ -1,6 +1,3 @@
-<?php
-include('../../pageParts/navbarEtProf.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,14 +6,15 @@ include('../../pageParts/navbarEtProf.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page UE</title>
     <link rel="stylesheet" href="../../styles/page_ue.css">
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="../../ajax/ue.js" defer></script>
+    <?php include("../../pageParts/link.php");?>
 </head>
 
 <body>
-    <nav>
-
-    </nav>
+   <!-- include de la nav bar -->
+   <?php include("../../pageParts/navbarEtud.php");?>
+    <!-- debut de la page  -->
+<br><br><br><br>
     <header class="container my-3">
         <h1>UE : Nom de l'UE</h1>
         <button class="btn btn-primary float-end" id="createPostBtn" style="display: none;">Créer un nouveau post</button>
