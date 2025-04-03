@@ -32,10 +32,6 @@
                         <p class="text-center"><a href="password-forget.html"> Mot de passe oublier ? </a></p><hr>
                     </div>
                 </form>
-                <h3 class="text-center"> Se connecter au moyen du compte :</h3>
-                <div class="d-grid  p-3 ">
-                <button type="button" class="btn btn-outline-secondary mb-3 text-body">Authentification UTBM</button><hr>
-                </div>
             </div>
         </div>
     </div>
