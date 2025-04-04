@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="../../styles/post_ue_prof.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <?php include("../../pageParts/link.php");?>
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
     <!-- include de la nav bar -->
-    <?php include("../../pageParts/navbarProf.php");?>
+    <?php include("../../pageParts/navbarProf.php"); ?>
     <!-- debut de la page  -->
     <div class="rectangle">
         <h1>WE4A Développement Web </h1><br>
@@ -26,7 +26,7 @@
                 <span class="message-text">Voici un fichier important à télécharger.</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile" >Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <span class="message-text">Votre rapport PDF est disponible ici.</span>
                 <div class="date-heure">22/02/2005 20:00</div>
                 <div class="button-container">
-                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile" >Modifier</button>
+                    <button class="btn btn-warning btn-sm mr-2" data-bs-toggle="modal" data-bs-target="#modFile">Modifier</button>
                     <button class="btn btn-danger btn-sm" onclick="showPopup('warning')">Supprimer</button>
                 </div>
             </div>
@@ -95,70 +95,72 @@
             </div>
         </div>
     </div>
-    
+
     <!--modification des messages -->
     <div class="modal fade" id="modMessage" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modifier le message</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="hidden" id="ueId">
-                            <div class="mb-3">
-                                <label for="msgTitle">Titre du Message</label>
-                                <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le titre du message">
-                            </div>
-                            <div class="mb-3">
-                                <label for="msgContent">Contenu du Message</label>
-                                <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <button type="button" class="btn btn-primary" >Enregistrer</button>
-                        </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modifier le message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="ueId">
+                    <div class="mb-3">
+                        <label for="msgTitle">Titre du Message</label>
+                        <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le titre du message">
+                    </div>
+                    <div class="mb-3">
+                        <label for="msgContent">Contenu du Message</label>
+                        <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
+                </div>
             </div>
+        </div>
+    </div>
 
 
     <!-- modification des fichiers -->
     <div class="modal fade" id="modFile" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modifier le post</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="hidden" id="ueId">
-                            <div class="mb-3">
-                                <label for="msgTitle">Nom du Fichier</label>
-                                <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le nom du fichier">
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="fileUpload">Choisir un Fichier</label>
-                                <input type="file" class="form-control" id="fileUpload">
-                            </div>
-                            <div class="mb-3">
-                                <label for="msgContent">Commentaire</label>
-                                <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
-                            </div>
-                        </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modifier le post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="ueId">
+                    <div class="mb-3">
+                        <label for="msgTitle">Nom du Fichier</label>
+                        <input type="text" class="form-control" id="msgTitle" placeholder="Entrez le nom du fichier">
+                    </div>
 
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
-                        </div>
+                    <div class="mb-3">
+                        <label for="fileUpload">Choisir un Fichier</label>
+                        <input type="file" class="form-control" id="fileUpload">
+                    </div>
+                    <div class="mb-3">
+                        <label for="msgContent">Commentaire</label>
+                        <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
                     </div>
                 </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
+                </div>
             </div>
+        </div>
+    </div>
 
     <script src="../../js/post_ue_prof.js"></script>
+    <script src="/Projet_WE4A/js/navigation.js"></script>
+
 
 </body>
 

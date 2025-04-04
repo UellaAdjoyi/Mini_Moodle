@@ -79,6 +79,8 @@
     </div>
 
     <script src="/Projet_WE4A/js/creationPost.js"></script>
+    <script src="/Projet_WE4A/js/navigation.js"></script>
+
 </body>
 
 </html>

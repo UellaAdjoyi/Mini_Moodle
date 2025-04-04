@@ -7,16 +7,17 @@
     <title>Création de post</title>
     <link rel="stylesheet" href="../../styles/creationPost.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <?php include("../../pageParts/link.php");?>
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
     <!-- include de la nav bar -->
-    <?php include("../../pageParts/navbarProf.php");?>
+    <?php include("../../pageParts/navbarProf.php"); ?>
     <!-- debut de la page  -->
 
 
     <script src="/Projet_WE4A/js/updateProfile.js"></script>
+    <script src="/Projet_WE4A/js/navigation.js"></script>
 
 </body>
 

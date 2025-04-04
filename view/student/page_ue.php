@@ -94,6 +94,9 @@
         include('../../pageParts/footer.php');
         ?>
     </footer>
+
+    <script src="/Projet_WE4A/js/navigation.js"></script>
+
 </body>
 
 </html>

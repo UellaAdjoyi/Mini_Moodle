@@ -7,13 +7,13 @@
     <title></title>
     <link rel="stylesheet" href="../../styles/post_ue.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <?php include("../../pageParts/link.php");?>
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
-<!-- include de la nav bar -->
-    <?php include("../../pageParts/navbarEtud.php");?>
-<!-- debut de la page  -->
+    <!-- include de la nav bar -->
+    <?php include("../../pageParts/navbarEtud.php"); ?>
+    <!-- debut de la page  -->
     <div class="rectangle">
         <h1>WE4A Développement Web </h1>
         <div class="messages">
@@ -44,9 +44,10 @@
             </div>
         </div>
     </div>
-    <?php //include("../../pageParts/footer.php");?>
-    
+    <?php //include("../../pageParts/footer.php");
+    ?>
+    <script src="/Projet_WE4A/js/navigation.js"></script>
+
 </body>
 
 </html>
-

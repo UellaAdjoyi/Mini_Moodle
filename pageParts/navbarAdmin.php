@@ -1,12 +1,25 @@
 <nav class="navbar navbar-expand-lg fixed-top ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" class="logo">
-            <img id="logo" src="/Projet_WE4A/assets/images/utbm.png" alt="" width="100px"></a>
-        <!--Barre de recherche-->
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Rechercher</button>
-        </form>
+            <img id="logo" src="/Projet_WE4A/assets/images/utbm.png" alt="" width="100px">
+        </a>
+
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " href="home_admin.php">
+                <!--  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
+            </svg>-->
+                Tableau de bord
+            </a>
+
+            <a class="nav-item nav-link" href="catalogue.php">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-data-fill" viewBox="0 0 16 16">
+                <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
+                <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1" />
+            </svg>-->
+                Catalogue
+            </a>
+        </div>
 
         <div class="d-flex align-items-center ms-auto">
             <!-- Notification -->
@@ -45,11 +58,10 @@
 
 </nav>
 
-<!-- sidebar -->
+<!-- sidebar 
 <div class="row">
     <div class="col-md-2" id="sidebar" class="bg-light p-3">
         <ul class="nav flex-column">
-            <!-- Dashboard -->
             <li class="nav-item">
                 <a class="nav-link " href="home_admin.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
@@ -59,7 +71,6 @@
                 </a>
             </li>
 
-            <!-- Gestion des utilisateurs -->
             <li class="nav-item">
                 <a class="nav-link" href="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
@@ -69,7 +80,6 @@
                 </a>
             </li>
 
-            <!-- Catalogue -->
             <li class="nav-item">
                 <a class="nav-link" href="catalogue.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-data-fill" viewBox="0 0 16 16">
@@ -102,7 +112,6 @@
                 </a>
             </li>
 
-            <!-- Déconnexion -->
             <li class="nav-item">
                 <a class="nav-link" href="logout.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -113,7 +122,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div>-->
 
 
 </div>
