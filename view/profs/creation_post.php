@@ -7,12 +7,12 @@
     <title>Création de post</title>
     <link rel="stylesheet" href="../../styles/creationPost.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <?php include("../../pageParts/link.php");?>
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
     <!-- include de la nav bar -->
-    <?php include("../../pageParts/navbarProf.php");?>
+    <?php include("../../pageParts/navbarProf.php"); ?>
     <!-- debut de la page  -->
 
     <div class="rectangle">
@@ -32,7 +32,7 @@
                         <input type="radio" id="important" name="typeMessage" value="important">
                         <label for="important">Important</label>
                         <input type="radio" id="recommandation" name="typeMessage" value="recommandation" checked>
-                        <label for="recommandation">Recommandationt</label>
+                        <label for="recommandation">Recommandation</label>
                         <input type="radio" id="information" name="typeMessage" value="information" checked>
                         <label for="information">Information</label>
                     </div>
@@ -45,7 +45,7 @@
                         <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-success">Pubier</button>
+                        <button type="submit" class="btn btn-success">Publier</button>
                         <button class="btn btn-danger"><a href="post_ue.php">Annuler</a></button>
                     </div>
 
@@ -69,7 +69,7 @@
                         <textarea name="commentaire" class="form-control" id=""></textarea>
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-success">Pubier</button>
+                        <button type="submit" class="btn btn-success">Publier</button>
                         <button class="btn btn-danger"><a href="post_ue.php">Annuler</a></button>
                     </div>
                 </form>
