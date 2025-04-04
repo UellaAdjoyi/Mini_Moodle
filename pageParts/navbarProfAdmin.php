@@ -5,10 +5,11 @@
         </a>
         <!-- Liens de navigation -->
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="../index.php">Accueil</a>
+            <a class="nav-item nav-link" href="../../index.php">Accueil</a>
             <a class="nav-item nav-link" href="../profs/page_ue_prof.php">Choix d'UE</a>
-            <a class="nav-item nav-link" href="../admin/">Tableau de bord</a>
             <a class="nav-item nav-link" href="#">Liste des UE</a>
+            <a class="nav-item nav-link" href="../admin/home_admin.php">Dashboard</a>
+
         </div>
 
         <!-- Partie droite : Notifications, Messages, Avatar -->
