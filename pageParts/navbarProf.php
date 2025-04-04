@@ -7,7 +7,8 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="../../index.php">Accueil</a>
                 <a class="nav-item nav-link" href="../profs/page_ue_prof.php">Choix d'UE</a>
-                <a class="nav-item nav-link" href="#">Liste des UE</a>
+                <a class="nav-item nav-link" href="#">Liste des UEs</a>
+                <a class="nav-item nav-link" href="../profs/post_ue.php">Posts</a>
             </div>
 
             <!-- Partie droite : Notifications, Messages, Avatar -->
