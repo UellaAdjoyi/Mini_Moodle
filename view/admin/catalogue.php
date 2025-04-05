@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue</title>
     <link rel="stylesheet" href="../../styles/catalogue.css">
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
-=======
+
     <?php
     include('../../pageParts/link.php');
     ?>
->>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
+
 </head>
 
 <body>
@@ -58,7 +58,7 @@
                         </select>
                     </div>
 
-<<<<<<< HEAD
+
 
             <!-- Contenu des Utilisateurs (masqué par défaut) -->
             <div id="user-content" style="display: none;">
@@ -69,13 +69,11 @@
                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Inscription
                     </button></div> -->
                 <div id="user-list" class="list-group">
-                    <!-- Les utilisateurs seront chargés via AJAX ici -->
-=======
->>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
+                    <!-- Les utilisateurs seront chargés via AJAX ici --
                 </div>
 
 
-                <!-- Contenu des Utilisateurs (masqué par défaut) -->
+                <!- Contenu des Utilisateurs (masqué par défaut) -->
                 <div id="user-content" style="display: none;">
                     <h2 class="mt-4">Liste des Utilisateurs</h2>
                     <div><button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="">
@@ -145,7 +143,7 @@
         </div>
     </div>
 
-<<<<<<< HEAD
+
         <!-- Le bouton pour ouvrir la modale -->
  
 
@@ -218,8 +216,9 @@
     </div>
 
 
-=======
->>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
+
+    
+
     <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/catalogue.js"></script>
     <script src="../../js/inscription.js"></script>
