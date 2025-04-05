@@ -1,49 +1,19 @@
-<?php
-include('../../pageParts/navbarEtProf.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="../../styles/navbarAdmin.css">
+    <title>Création de post</title>
     <link rel="stylesheet" href="../../styles/creationPost.css">
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
-
-    <!-- Modal de modification du profil -->
-    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editProfileModalLabel">Modifier mon profil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editProfileForm">
-                        <div class="mb-3">
-                            <label for="profileName" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="profileName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="profileEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="profileEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="profileAvatar" class="form-label">Changer l'avatar</label>
-                            <input type="file" class="form-control" id="profileAvatar">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- include de la nav bar -->
+    <?php include("../../pageParts/navbarProf.php"); ?>
+    <!-- debut de la page  -->
 
     <div class="rectangle">
         <div class="container mt-4">
@@ -58,11 +28,13 @@ include('../../pageParts/navbarEtProf.php');
                 <div class="form-title">Créer un Message Texte</div>
                 <form>
                     <div class="radio-container">
-                        <label>Est-ce un message important ?AIDEZ MOI A TROUVER LES TYPES DE MESSAGE !!!!</label><br>
-                        <input type="radio" id="important" name="importance" value="important">
+                        <label>Type de message</label><br>
+                        <input type="radio" id="important" name="typeMessage" value="important">
                         <label for="important">Important</label>
-                        <input type="radio" id="notImportant" name="importance" value="notImportant" checked>
-                        <label for="notImportant">Pas important</label>
+                        <input type="radio" id="recommandation" name="typeMessage" value="recommandation" checked>
+                        <label for="recommandation">Recommandation</label>
+                        <input type="radio" id="information" name="typeMessage" value="information" checked>
+                        <label for="information">Information</label>
                     </div>
                     <div class="form-group">
                         <label for="msgTitle">Titre du Message</label>
@@ -73,7 +45,7 @@ include('../../pageParts/navbarEtProf.php');
                         <textarea class="form-control" id="msgContent" rows="4" placeholder="Entrez le contenu du message"></textarea>
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-success">Pubier</button>
+                        <button type="submit" class="btn btn-success">Publier</button>
                         <button class="btn btn-danger"><a href="post_ue.php">Annuler</a></button>
                     </div>
 
@@ -97,7 +69,7 @@ include('../../pageParts/navbarEtProf.php');
                         <textarea name="commentaire" class="form-control" id=""></textarea>
                     </div>
                     <div class="button-container">
-                        <button type="submit" class="btn btn-success">Pubier</button>
+                        <button type="submit" class="btn btn-success">Publier</button>
                         <button class="btn btn-danger"><a href="post_ue.php">Annuler</a></button>
                     </div>
                 </form>
@@ -106,9 +78,9 @@ include('../../pageParts/navbarEtProf.php');
 
     </div>
 
-    <script src="/Projet_WE4A/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Projet_WE4A/js/updateProfile.js"></script>
     <script src="/Projet_WE4A/js/creationPost.js"></script>
+    <script src="/Projet_WE4A/js/navigation.js"></script>
+
 </body>
 
 </html>

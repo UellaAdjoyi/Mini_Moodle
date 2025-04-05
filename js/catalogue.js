@@ -4,11 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     //  base de données en mémoire pour tester
     let ueData = [
         { id: 1, code: "UE101", intitule: "Mathématiques", image: null },
-        { id: 2, code: "UE102", intitule: "Programmation", image: null }
+        { id: 2, code: "UE102", intitule: "Programmation", image: null },
+        { id: 3, code: "UE103", intitule: "Mécanique", image: null },
+        { id: 2, code: "UE102", intitule: "Electricité", image: null }
+
     ];
 
     let userData = [
         { id: 1, nom: "ADH", prenoms: "Mathématiques" },
+        { id: 2, nom: "ASC", prenoms: "John" },
+        { id: 3, nom: "DUPU", prenoms: "Marie" },
+        { id: 4, nom: "ANT", prenoms: "Didier" },
+
     ];
 
     // Références DOM
@@ -35,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span>${ue.code} - ${ue.intitule}</span>
                 </div>
                 <div>
+                    <button class="btn btn-success btn-sm assign-ue" data-id="${ue.id}">Assigner</button>
                     <button class="btn btn-primary btn-sm update-ue" data-id="${ue.id}">Modifier</button>
                     <button class="btn btn-danger btn-sm delete-ue" data-id="${ue.id}">Effacer</button>
                 </div>
@@ -160,9 +168,82 @@ document.addEventListener("DOMContentLoaded", function () {
     // Charger les UE au démarrage
     loadUE();
     loadUser();
+    populateUserSelect();
+
 
     // Afficher l'onglet UE par défaut
     ueTab.click();
+
+    //Assignation d'UEs
+    userData.forEach(user => {
+        user.ues = []; //Tableau des ids des UEs
+    });
+
+    //Mise à jour du sélecteur de user
+    function populateUserSelect() {
+        const userSelect = document.getElementById("user-select");
+        userSelect.innerHTML = "";
+        userData.forEach(user => {
+            const option = document.createElement("option");
+            option.value = user.id;
+            option.textContent = `${user.nom} ${user.prenoms}`;
+            userSelect.appendChild(option);
+        });
+    }
+
+    // Quand on clique sur "Assigner"
+    ueList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("assign-ue")) {
+            const ueId = parseInt(e.target.dataset.id);
+            const selectedUserId = parseInt(document.getElementById("user-select").value);
+            const user = userData.find(u => u.id === selectedUserId);
+            if (!user) return;
+
+            if (!user.ues.includes(ueId)) {
+                user.ues.push(ueId);
+                alert("UE assignée !");
+                updateAssignedUEList(user);
+            } else {
+                alert("UE déjà assignée.");
+            }
+        }
+    });
+
+    function updateAssignedUEList(user) {
+        const list = document.getElementById("assigned-ue-list");
+        list.innerHTML = "";
+
+        user.ues.forEach(ueId => {
+            const ue = ueData.find(u => u.id === ueId);
+            if (ue) {
+                const li = document.createElement("li");
+                li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+                li.textContent = `${ue.code} - ${ue.intitule}`;
+
+                const btn = document.createElement("button");
+                btn.textContent = "Retirer";
+                btn.classList.add("btn", "btn-sm", "btn-danger");
+                btn.onclick = () => {
+                    user.ues = user.ues.filter(id => id !== ueId);
+                    updateAssignedUEList(user);
+                };
+
+                li.appendChild(btn);
+                list.appendChild(li);
+            }
+        });
+    }
+
+    //Affichage des Ues au changement d'user
+    document.getElementById("user-select").addEventListener("change", function () {
+        const selectedUserId = parseInt(this.value);
+        const user = userData.find(u => u.id === selectedUserId);
+        if (user) {
+            updateAssignedUEList(user);
+        }
+    });
+
+
 });
 
 

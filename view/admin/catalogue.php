@@ -1,6 +1,3 @@
-<?php
-include('../../pageParts/navbarAdmin.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,36 +6,59 @@ include('../../pageParts/navbarAdmin.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue</title>
     <link rel="stylesheet" href="../../styles/catalogue.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+=======
+    <?php
+    include('../../pageParts/link.php');
+    ?>
+>>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
 </head>
 
 <body>
-    <div class="col-md-9 offset-1" id="catalogue">
-        <div class="container mt-5">
+    <?php
+    include('../../pageParts/navbarAdmin.php');
+    ?>
+    <div class="row">
+        <div class="col-md-10 offset-1" id="catalogue">
+            <!--Barre de recherche-->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Rechercher</button>
+            </form>
+            <div class="container mt-5">
 
-            <!-- Boutons pour changer d'onglet -->
-            <div class="d-flex justify-content-center mb-4">
-                <button id="ue-tab" class="btn btn-primary me-2">UEs</button>
-                <button id="user-tab" class="btn btn-secondary">Utilisateurs</button>
-            </div>
+                <!-- Boutons pour changer d'onglet -->
+                <div class="d-flex justify-content-center mb-4">
+                    <button id="ue-tab" class="btn btn-primary me-2">UEs</button>
+                    <button id="user-tab" class="btn btn-secondary">Utilisateurs</button>
+                </div>
 
-            <!-- Contenu des UE -->
-            <div id="ue-content">
-                <h2 class="mt-4">Liste des UEs</h2>
-                <div> <!--  ajouter une UE -->
-                    <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUeModal">
-                        Créer
-                    </button>
-                </div>
-                <div id="ue-list" class="list-group mb-5">
-                    <!--  UE  chargées via AJAX ici -->
-                </div>
-                <h3 class="mt-4">UEs Assignées à l'utilisateur</h3>
+                <!-- Contenu des UE -->
+                <div id="ue-content">
+                    <h2 class="mt-4">Liste des UEs</h2>
+                    <div> <!--  ajouter une UE -->
+                        <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addUeModal">
+                            Créer
+                        </button>
+                    </div>
+                    <div id="ue-list" class="list-group mb-5">
+                        <!--  UE  chargées via AJAX ici -->
+                    </div>
+                    <!-- <h3 class="mt-4">UEs Assignées à l'utilisateur</h3>
                 <ul id="assigned-ue-list" class="list-group">
-                    <!-- Les UE assignées seront affichées ici -->
-                </ul>
-            </div>
+                    Les UE assignées seront affichées ici 
+                </ul>-->
+                    <div class="my-4">
+                        <label for="user-select" class="form-label">
+                            <h2>Sélectionnez un utilisateur :</h2>
+                        </label>
+                        <select id="user-select" class="form-select mb-2">
+                            <!-- JS-->
+                        </select>
+                    </div>
 
+<<<<<<< HEAD
 
             <!-- Contenu des Utilisateurs (masqué par défaut) -->
             <div id="user-content" style="display: none;">
@@ -50,67 +70,82 @@ include('../../pageParts/navbarAdmin.php');
                     </button></div> -->
                 <div id="user-list" class="list-group">
                     <!-- Les utilisateurs seront chargés via AJAX ici -->
+=======
+>>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
                 </div>
-                <!--  ajouter un user -->
 
-            </div>
 
-            <!-- ajout d'une UE -->
-            <div class="modal fade" id="addUeModal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Ajouter une UE</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <!-- Contenu des Utilisateurs (masqué par défaut) -->
+                <div id="user-content" style="display: none;">
+                    <h2 class="mt-4">Liste des Utilisateurs</h2>
+                    <div><button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="">
+                            <a href="inscription.php" class="inscription">Créer</a>
+                        </button></div>
+                    <div id="user-list" class="list-group">
+                        <!-- Les utilisateurs seront chargés via AJAX ici -->
+                    </div>
+                    <!--  ajouter un user -->
+
+                </div>
+
+                <!-- ajout d'une UE -->
+                <div class="modal fade" id="addUeModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Ajouter une UE</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="add-ue-form">
+                                    <input type="text" id="ue-code" class="form-control mb-2" placeholder="Code UE" required>
+                                    <input type="text" id="ue-title" class="form-control mb-2" placeholder="Intitulé" required>
+                                    <input type="file" id="ue-image" class="form-control mb-2" accept="image/*">
+                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <form id="add-ue-form">
-                                <input type="text" id="ue-code" class="form-control mb-2" placeholder="Code UE" required>
-                                <input type="text" id="ue-title" class="form-control mb-2" placeholder="Intitulé" required>
-                                <input type="file" id="ue-image" class="form-control mb-2" accept="image/*">
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </div>
+                </div>
+
+                <!--modification d"UES -->
+                <div class="modal fade" id="editUEModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modifier l'UE</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" id="ueId">
+                                <div class="mb-3">
+                                    <label for="ueCode" class="form-label">Code UE</label>
+                                    <input type="text" id="ueCode" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ueIntitule" class="form-label">Intitulé</label>
+                                    <input type="text" id="ueIntitule" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ueImage" class="form-label">Image URL</label>
+                                    <input type="text" id="ueImage" class="form-control">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            </form>
+                                <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-
-            <!--modification d"UES -->
-            <div class="modal fade" id="editUEModal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modifier l'UE</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="hidden" id="ueId">
-                            <div class="mb-3">
-                                <label for="ueCode" class="form-label">Code UE</label>
-                                <input type="text" id="ueCode" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ueIntitule" class="form-label">Intitulé</label>
-                                <input type="text" id="ueIntitule" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ueImage" class="form-label">Image URL</label>
-                                <input type="text" id="ueImage" class="form-control">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <button type="button" class="btn btn-primary" id="saveUEChanges">Enregistrer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
     </div>
 
+<<<<<<< HEAD
         <!-- Le bouton pour ouvrir la modale -->
  
 
@@ -183,6 +218,8 @@ include('../../pageParts/navbarAdmin.php');
     </div>
 
 
+=======
+>>>>>>> c9f21471c0d1d21bc67c67828d2f3fd2c1e6e656
     <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../js/catalogue.js"></script>
     <script src="../../js/inscription.js"></script>

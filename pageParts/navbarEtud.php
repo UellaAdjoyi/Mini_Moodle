@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="/Projet_WE4A/styles/navbarAdmin.css">
-    <link rel="stylesheet" href="/Projet_WE4A/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-</head>
-
-<body>
     <nav class="navbar navbar-expand-lg fixed-top ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" class="logo">
@@ -17,7 +5,7 @@
             </a>
             <!-- Liens de navigation -->
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="../index.php">Accueil</a>
+                <a class="nav-item nav-link" href="../../index.php">Accueil</a>
                 <a class="nav-item nav-link" href="../student/page_ue.php">Choix d'UE</a>
                 <a class="nav-item nav-link" href="#">Liste des UE</a>
             </div>
@@ -30,6 +18,8 @@
                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
                     </svg>
                 </a>
+
+
 
                 <!-- Avatar Utilisateur + Menu Déroulant -->
                 <div class="dropdown">
@@ -89,7 +79,3 @@
 
     <script src="/Projet_WE4A/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Projet_WE4A/js/updateProfile.js"></script>
-
-</body>
-
-</html>

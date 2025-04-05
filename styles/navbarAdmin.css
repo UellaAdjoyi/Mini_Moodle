@@ -11,7 +11,7 @@
     filter: brightness(50%) contrast(1.5);
 }
 
-.sidebar-left {
+/* .sidebar-left {
     flex-direction: column;
 
 
@@ -20,7 +20,7 @@
 
 #sidebar {
     background-color: white;
-    /* height: 100vh; */
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,19 +54,19 @@
     height: 30px;
     font-weight: bold;
 
-}
+} */
 
 
 .nav-link.active {
-    background-color: #1b7bf0;
+    background-color: #e81a1a;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: dashed 5px;
 }
 
-#sidebar .nav-item a:last-child {
+/* #sidebar .nav-item a:last-child {
     margin-bottom: 0;
-}
+} */
 
 .dropdown-menu {
     display: none;

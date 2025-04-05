@@ -1,3 +1,7 @@
+//formulaire message par défaut
+window.onload = function() {
+    toggleForm('message');
+};
 // Fonction pour gérer l'affichage des formulaires
 function toggleForm(formType) {
     // Masquer tous les formulaires
