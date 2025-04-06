@@ -1,3 +1,6 @@
+<?php
+    $qui="admin";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +16,8 @@
 <body>
     <?php
     include('../../pageParts/navbarProfAdmin.php')
+    // include('../../pageParts/navbarAdmin.php')
+
     ?>
 </body>
 

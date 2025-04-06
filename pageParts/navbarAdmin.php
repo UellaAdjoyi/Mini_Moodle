@@ -29,8 +29,6 @@
                 </svg>
             </a>
 
-
-
             <!-- Avatar Utilisateur + Menu Déroulant -->
             <div class="dropdown">
                 <a href="#" id="userDropdown" class="d-flex align-items-center dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,7 +53,6 @@
             </div>
         </div>
     </div>
-
 </nav>
 
 <!-- sidebar 

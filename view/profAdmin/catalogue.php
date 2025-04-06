@@ -1,5 +1,5 @@
 <?php
-include('../../pageParts/navbarAdmin.php');
+    $qui="admin";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,10 +9,14 @@ include('../../pageParts/navbarAdmin.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue</title>
     <link rel="stylesheet" href="../../styles/catalogue.css">
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <?php include("../../pageParts/link.php"); ?>
 </head>
 
 <body>
+    <?php
+    include('../../pageParts/navbarProfAdmin.php');
+    
+    ?>
     <div class="col-md-9 offset-1" id="catalogue">
         <div class="container mt-5">
 
