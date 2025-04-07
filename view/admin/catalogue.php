@@ -40,6 +40,13 @@
                 <ul id="assigned-ue-list" class="list-group">
                     <!-- Les UE assignées seront affichées ici -->
                 </ul>
+
+                <div class="my-4">
+                    <label for="user-select" class="form-label">Sélectionnez un utilisateur :</label>
+                    <select id="user-select" class="form-select mb-2">
+                        <!--  JS -->
+                    </select>
+                </div>
             </div>
 
 
@@ -114,7 +121,7 @@
         </div>
     </div>
 
-    <!-- Le bouton pour ouvrir la modale -->
+
 
 
     <!-- La modale d'inscription -->
