@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../../styles/post_ue_prof.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <?php include("../../pageParts/link.php"); ?>
+    <?php
+    include('../../pageParts/link.php');
+    include("../../pageParts/modificationProfil.php");
+    ?>
 </head>
 
 <body>

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../../styles/page_ue.css">
     <?php
     include('../../pageParts/link.php');
+    include("../../pageParts/modificationProfil.php");
     ?>
+
 </head>
 
 

@@ -1,5 +1,5 @@
 <?php
-    $qui="admin";
+$qui = "admin";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,8 @@
     <title>Admin home</title>
     <link rel="stylesheet" href="/Projet_WE4A/styles/adminpage.css">
     <?php
-    include('../../pageParts/link.php')
+    include('../../pageParts/link.php');
+    include("../../pageParts/modificationProfil.php");
     ?>
 
 </head>

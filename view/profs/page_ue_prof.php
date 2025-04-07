@@ -1,23 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Création de post</title>
-    <link rel="stylesheet" href="../../styles/creationPost.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <?php include("../../pageParts/link.php"); ?>
+    <title>Page UE</title>
+    <link rel="stylesheet" href="../../styles/page_ue.css">
+    <?php
+    include('../../pageParts/link.php');
+    include("../../pageParts/modificationProfil.php");
+    ?>
+
 </head>
 
-<body>
-    <!-- include de la nav bar -->
-    <?php include("../../pageParts/navbarProf.php"); ?>
-    <!-- debut de la page  -->
 
+<body class="page-ue">
+    <?php
+    include('../../pageParts/navbarProf.php');
+    ?>
+    <main class="container">
+        <br class="container mt-4">
+        <h2 class="mb-4">Mes cours</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
 
-    <script src="/Projet_WE4A/js/updateProfile.js"></script>
-    <script src="/Projet_WE4A/js/creationPost.js"></script>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150/007bff/ffffff');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150/007bff/ffffff');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150/007bff/ffffff');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150/007bff/ffffff');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="course-image" style="background-image: url('https://via.placeholder.com/300x150/6c757d/ffffff');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nom de l'UE et Libellé</h5>
+                        <p class="card-text">Type d'UE</p>
+                        <!--<p class="text-muted">0% terminé</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    </br>
+    <footer>
+        <?php
+        include('../../pageParts/footer.php');
+        ?>
+    </footer>
+
     <script src="/Projet_WE4A/js/navigation.js"></script>
 
 </body>

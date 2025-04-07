@@ -1,5 +1,5 @@
 <?php
-    $qui="admin";
+$qui = "admin";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof admin page</title>
     <?php
-    include('../../pageParts/link.php')
+    include('../../pageParts/link.php');
+    include("../../pageParts/modificationProfil.php");
     ?>
+
 </head>
 
 <body>
