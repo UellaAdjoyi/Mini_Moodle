@@ -1,6 +1,3 @@
-<?php
-include('../../pageParts/navbarAdmin.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,9 +7,15 @@ include('../../pageParts/navbarAdmin.php');
     <title>Catalogue</title>
     <link rel="stylesheet" href="../../styles/catalogue.css">
     <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <?php
+    include('../../pageParts/link.php');
+    ?>
 </head>
 
 <body>
+    <?php
+    include('../../pageParts/navbarAdmin.php');
+    ?>
     <div class="col-md-9 offset-1" id="catalogue">
         <div class="container mt-5">
 
@@ -46,7 +49,7 @@ include('../../pageParts/navbarAdmin.php');
                 <div>
                     <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#signupModal">Créer</button>
                 </div>
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Inscription
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Inscription
                     </button></div> -->
                 <div id="user-list" class="list-group">
                     <!-- Les utilisateurs seront chargés via AJAX ici -->
@@ -111,10 +114,10 @@ include('../../pageParts/navbarAdmin.php');
         </div>
     </div>
 
-        <!-- Le bouton pour ouvrir la modale -->
- 
+    <!-- Le bouton pour ouvrir la modale -->
 
-        <!-- La modale d'inscription -->
+
+    <!-- La modale d'inscription -->
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -125,57 +128,57 @@ include('../../pageParts/navbarAdmin.php');
                 <div class="modal-body">
                     <!-- Formulaire d'inscription -->
                     <form id="signupForm">
-                    <div class="input-group  mb-3">
-                        <span class="input-group-text">
-                        </span>
-                        <input type="text" class="form-control" placeholder="Name ">
-                    </div>  
-                    <div class="input-group  mb-3">
-                        <span class="input-group-text">
-                        
-                        </span>
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>  
-                    <div class="input-group  mb-3">
-                        <span class="input-group-text">
-                        </span>
-                        <input type="password" class="form-control" placeholder="Password ">
-                    </div> 
-                    <div class="input-group mb-3 ">
-                        <span class="input-group-text"></span>
-                        <select class="form-select"  id="role" name="role" >
+                        <div class="input-group  mb-3">
+                            <span class="input-group-text">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Name ">
+                        </div>
+                        <div class="input-group  mb-3">
+                            <span class="input-group-text">
 
-                            <option value="" selected disabled>-- Role--</option>
-                            <option value="etudiant">Etudiant</option>
-                            <option value="admin">Administrateur</option>
-                            <option value="prof">Professeur</option>
-                            <option value="prof_admin">Professeur & Administrateur</option>
+                            </span>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="input-group  mb-3">
+                            <span class="input-group-text">
+                            </span>
+                            <input type="password" class="form-control" placeholder="Password ">
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text"></span>
+                            <select class="form-select" id="role" name="role">
 
-                        </select>
-                    </div> 
-                    <div class="mb-3">
-                         <div id="selectionAffichee" class="alert alert-info" style="display: none;">
-                            <strong>UEs sélectionnés :</strong>
-                            <div id="listeSelection" class="d-flex flex-wrap"></div>
+                                <option value="" selected disabled>-- Role--</option>
+                                <option value="etudiant">Etudiant</option>
+                                <option value="admin">Administrateur</option>
+                                <option value="prof">Professeur</option>
+                                <option value="prof_admin">Professeur & Administrateur</option>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div id="selectionAffichee" class="alert alert-info" style="display: none;">
+                                <strong>UEs sélectionnés :</strong>
+                                <div id="listeSelection" class="d-flex flex-wrap"></div>
+                            </div>
+
+                            <!-- Liste déroulante HTML visible avec Bootstrap -->
+                            <label for="liste" class="form-label">Liste des UEs :</label>
+                            <select class="form-select" id="liste" size="3" onchange="gererSelection()">
+                                <option value="UE101">UE101</option>
+                                <option value="UE102">UE102</option>
+                                <option value="UE103">UE103</option>
+                                <option value="UE104">UE104</option>
+                                <option value="UE105">UE105</option>
+                                <option value="UE106">UE106</option>
+                            </select>
                         </div>
 
-                        <!-- Liste déroulante HTML visible avec Bootstrap -->
-                        <label for="liste" class="form-label">Liste des UEs :</label>
-                        <select class="form-select" id="liste" size="3" onchange="gererSelection()">
-                            <option value="UE101">UE101</option>
-                            <option value="UE102">UE102</option>
-                            <option value="UE103">UE103</option>
-                            <option value="UE104">UE104</option>
-                            <option value="UE105">UE105</option>
-                            <option value="UE106">UE106</option>
-                        </select>
-                    </div>
-                   
-                    <div class="d-grid ">
-                        <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Annuler</button>
-                        <button type="button" class="btn btn-primary mb-3" id="saveUserChanges">Enregistrer</button>
-                    </div> 
-                       
+                        <div class="d-grid ">
+                            <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-primary mb-3" id="saveUserChanges">Enregistrer</button>
+                        </div>
+
                     </form>
                 </div>
             </div>
